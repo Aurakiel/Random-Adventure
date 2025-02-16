@@ -30,7 +30,28 @@ userInput = input("Press 'ENTER' to continue. ")
 
 while True:
     if userInput == "":
-        print(f"Program begins")
+        program_intro()
+        userInput = input("Please type your selection: ")
+        if userInput.lower() == 'quit':
+            break
+        elif userInput.lower() != 'start' and userInput.lower() != 'lore':
+            print(f"Computers are good at following instructions but not at reading your mind.")
+            userInput = input("Please type your selection: ")
+        elif userInput.lower() == 'lore':
+            print("Lore information to go here...")
+            print(f"========================================")
+            print(f"      Press 'ENTER' to return")
+            print(f"========================================")
+            userInput = input(f"'ENTER' will return you to the main menu: ")
+            while userInput.lower() != '':
+                print(f"Computers are good at following instructions but not at reading your mind.")
+                userInput = input(f"Press 'ENTER' ")
+            else:
+                print("Returning to main menu...")
+        elif userInput.lower() == 'start':
+            #still needs coded
+            print("Game options begin here")
+            userInput = input("Press Enter: ")
     else:
         print(f"Computers are good at following instructions but not at reading your mind.")
         userInput = input("Please press 'ENTER' to begin. ")
