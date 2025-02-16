@@ -3,6 +3,7 @@
 # -------------------------------
 import os
 import sys
+import time
 
 # List to hold melee Hero Stats
 meleeHero = ["Name Me", 25, 5]
@@ -71,10 +72,17 @@ while True:
                   f"          you wish the ages to remember you by?")
             print(f"Please type 'yes' to confirm or 'no' to give another name.")
             userInput = input(f"'yes' or 'no': ")
+            print(f"Narrator: Let's begin!")
+            time.sleep(2)
             while userInput.lower() != 'yes' and userInput.lower() != 'no':
-                print(f"Computers are good at following instructions but not at reading your mind.")
-                userInput = input(f"Please type 'yes' to confirm or 'no' to give another name.")
-            #start work here
+                print(f"You'll need to confirm your name to begin.")
+                print(f"Please type 'yes' to confirm or 'no' to give another.")
+                userInput = input(f"'yes' or 'no'")
+            if userInput.lower() == 'no':
+                meleeHero[0] = input(f"What would you like to be called? ")
+                print(f"Narrator: {meleeHero[0]}, does have an air of destiny")
+                time.sleep(2)
+            print("more game here")
     # prompts for enter if user input is invalid
     else:
         print(f"Computers are good at following instructions but not at reading your mind.")
