@@ -22,3 +22,15 @@ def program_intro():
     print(f"Type: lore  ......for the backstory")
     print(f"========================================")
 
+# progam start
+print(f"========================================")
+print(f"    To begin, please press ENTER")
+print(f"========================================")
+userInput = input("Press 'ENTER' to continue. ")
+
+while True:
+    if userInput == "":
+        print(f"Program begins")
+    else:
+        print(f"Computers are good at following instructions but not at reading your mind.")
+        userInput = input("Please press 'ENTER' to begin. ")
