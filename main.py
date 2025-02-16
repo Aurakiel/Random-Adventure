@@ -1,3 +1,6 @@
+#--------------------------------
+# Developer: Ashley Schultz 2025
+# -------------------------------
 import os
 import sys
 
@@ -21,8 +24,9 @@ def program_intro():
     print(f"Type: quit  ......to end the game")
     print(f"Type: lore  ......for the backstory")
     print(f"========================================")
-
+# ----------------------------------------------------
 # progam start
+# ----------------------------------------------------
 print(f"========================================")
 print(f"    To begin, please press ENTER")
 print(f"========================================")
@@ -30,29 +34,37 @@ userInput = input("Press 'ENTER' to continue. ")
 
 while True:
     if userInput == "":
+        # displays main menu - gets user selection
         program_intro()
         userInput = input("Please type your selection: ")
+        # closes the progam
         if userInput.lower() == 'quit':
             break
+        # prompt for valid selection
         else:
             while userInput.lower() != 'start' and userInput.lower() != 'lore':
                 print(f"Computers are good at following instructions but not at reading your mind.")
                 userInput = input("Please type your selection: ")
+        # lore menu
         if userInput.lower() == 'lore':
+            # make this pretty - add lore
             print("Lore information to go here...")
             print(f"========================================")
             print(f"      Press 'ENTER' to return")
             print(f"========================================")
             userInput = input(f"'ENTER' will return you to the main menu: ")
+            # loops back around to main menu after reading
             while userInput.lower() != '':
                 print(f"Computers are good at following instructions but not at reading your mind.")
                 userInput = input(f"Press 'ENTER' ")
             else:
                 print("Returning to main menu...")
+        # main process to drive the game
         elif userInput.lower() == 'start':
             #still needs coded
             print("Game options begin here")
             userInput = input("Press Enter: ")
+    # prompts for enter if user input is invalid
     else:
         print(f"Computers are good at following instructions but not at reading your mind.")
         userInput = input("Please press 'ENTER' to begin. ")
