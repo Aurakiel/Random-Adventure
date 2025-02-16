@@ -61,14 +61,20 @@ while True:
                 print("Returning to main menu...")
         # main process to drive the game
         elif userInput.lower() == 'start':
-            print(f"========================================")
-            print(f"      Your Adventure Begins......")
-            print(f"========================================")
-            print(f"Story: Today is the day you've been waiting for. It's"
-                  f"your 18th birthday and that means you're finally old"
-                  f"enough to begin your adventure.")
-                  #pick up here
-            userInput = input("Press Enter: ")
+            print(f"============================================================")
+            print(f"            Your Adventure Begins......")
+            print(f"============================================================")
+            print(f"Narrator: Every heroic tale, has a main character. In this\n"
+                  f"          story, it's you!")
+            meleeHero[0] = input("Please, state your name: ")
+            print(f"Narrator: {meleeHero[0]}, that's good name. Is that the name\n"
+                  f"          you wish the ages to remember you by?")
+            print(f"Please type 'yes' to confirm or 'no' to give another name.")
+            userInput = input(f"'yes' or 'no': ")
+            while userInput.lower() != 'yes' and userInput.lower() != 'no':
+                print(f"Computers are good at following instructions but not at reading your mind.")
+                userInput = input(f"Please type 'yes' to confirm or 'no' to give another name.")
+            #start work here
     # prompts for enter if user input is invalid
     else:
         print(f"Computers are good at following instructions but not at reading your mind.")
