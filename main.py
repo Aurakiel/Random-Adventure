@@ -34,10 +34,11 @@ while True:
         userInput = input("Please type your selection: ")
         if userInput.lower() == 'quit':
             break
-        elif userInput.lower() != 'start' and userInput.lower() != 'lore':
-            print(f"Computers are good at following instructions but not at reading your mind.")
-            userInput = input("Please type your selection: ")
-        elif userInput.lower() == 'lore':
+        else:
+            while userInput.lower() != 'start' and userInput.lower() != 'lore':
+                print(f"Computers are good at following instructions but not at reading your mind.")
+                userInput = input("Please type your selection: ")
+        if userInput.lower() == 'lore':
             print("Lore information to go here...")
             print(f"========================================")
             print(f"      Press 'ENTER' to return")
