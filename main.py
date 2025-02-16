@@ -61,8 +61,13 @@ while True:
                 print("Returning to main menu...")
         # main process to drive the game
         elif userInput.lower() == 'start':
-            #still needs coded
-            print("Game options begin here")
+            print(f"========================================")
+            print(f"      Your Adventure Begins......")
+            print(f"========================================")
+            print(f"Story: Today is the day you've been waiting for. It's"
+                  f"your 18th birthday and that means you're finally old"
+                  f"enough to begin your adventure.")
+                  #pick up here
             userInput = input("Press Enter: ")
     # prompts for enter if user input is invalid
     else:
