@@ -67,21 +67,27 @@ while True:
             print(f"============================================================")
             print(f"Narrator: Every heroic tale, has a main character. In this\n"
                   f"          story, it's you!")
+            # gets player name, updates index
             meleeHero[0] = input("Please, state your name: ")
             print(f"Narrator: {meleeHero[0]}, that's good name. Is that the name\n"
                   f"          you wish the ages to remember you by?")
             print(f"Please type 'yes' to confirm or 'no' to give another name.")
+            # prompt for name confirmation
             userInput = input(f"'yes' or 'no': ")
+            # if yes - game begins
             print(f"Narrator: Let's begin!")
             time.sleep(2)
+            # until the user confirms name, they're prompted
             while userInput.lower() != 'yes' and userInput.lower() != 'no':
                 print(f"You'll need to confirm your name to begin.")
                 print(f"Please type 'yes' to confirm or 'no' to give another.")
                 userInput = input(f"'yes' or 'no'")
+            # if no is selected, prompted to give another name
             if userInput.lower() == 'no':
                 meleeHero[0] = input(f"What would you like to be called? ")
                 print(f"Narrator: {meleeHero[0]}, does have an air of destiny")
                 time.sleep(2)
+            # needs coded - next step of the game
             print("more game here")
     # prompts for enter if user input is invalid
     else:
