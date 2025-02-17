@@ -8,8 +8,11 @@ import time
 # List to hold melee Hero Stats
 meleeHero = ["Name Me", 25, 5]
 
+# Function to clear the screen
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 # Function to display melee Hero info
-# info_melee_hero(meleeHero) - call
 def info_melee_hero(meleeHero):
         print(f"Name: {meleeHero[0]}")
         print(f"HP: {meleeHero[1]}")
@@ -46,14 +49,43 @@ while True:
     match startGame:
         # once enter is pressed, the game starts
         case "":
+            clear_screen()
             program_intro()
-            time.sleep(10)
+            userInput = input("Please type your selection: ")
+            # controls main menu selection
+            menuSelection = userInput
+            match menuSelection:
+                # progresses game - needs hella more code
+                case "start":
+                    clear_screen()
+                    print(f"Next Step needs coded")
+                # opens lore menu - needs coded
+                case "lore":
+                    clear_screen()
+                    print(f"Lore Menu here")
+                # kicks out the loop to close the game
+                case "quit":
+                    startGame = "quit"
+                # invalid selections pull back the intro
+                case _:
+                    clear_screen()
+                    startGame = ""
+        # ends the program
+        case "quit":
+            clear_screen()
+            narration = "Narrator: Our journey has come to an end. Goodbye friend!"
+            type_narration(narration)
+            print("...Closing the Book on Your Adventure...")
+            time.sleep(2)
+            break
         # if the user presses anything other than enter, we do that for them
         case _:
+            clear_screen()
             narration = "Narrator: Computers are really good at taking instructions. People, not so much."
             type_narration(narration)
             narration = "Narrator: Here, let me help get you started."
             type_narration(narration)
-            startGame = ""
             print(f"...Loading Main Menu...")
             time.sleep(2)
+            clear_screen()
+            startGame = ""

@@ -1,7 +1,12 @@
 # **Random Adventure**
 
 ## Project Notes 02/16/2025
-> Got the main menu set up and began working on
+> Update 2: Deleted over 100 lines of code and reworked
+> the menus.  It's a thing of beauty now, and it is not to
+> changed. It's fine. **Remember it's fine**. Adding additional
+> menus later is acceptable, just don't screw with the logic.
+> 
+> Update 1: Got the main menu set up and began working on
 > the main process of the program - player naming
 > seems to be ironed out. Checked off creation of
 > the base class.
