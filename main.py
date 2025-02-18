@@ -9,7 +9,8 @@ import random
 # game_functions.py
 from game_functions import clear_screen
 from game_functions import program_intro
-from game_functions import  type_narration
+from game_functions import type_narration
+from game_functions import press_enter
 # hero_class.py
 from hero_class import Hero
 # default hero settings
@@ -17,9 +18,7 @@ hero = Hero("You", 25, 5)
 # ----------------------------------------------------
 # progam start
 # ----------------------------------------------------
-print(f"========================================")
-print(f"    To begin, please press ENTER")
-print(f"========================================")
+press_enter()
 userInput = input("Press 'ENTER' to continue. ")
 # controls the outter while loop beginning the program
 startGame = userInput

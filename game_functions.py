@@ -22,3 +22,9 @@ def program_intro():
     print(f"Type: quit  ......to end the game")
     print(f"Type: lore  ......for the backstory")
     print(f"========================================")
+
+#Function to prompt for enter
+def press_enter():
+    print(f"========================================")
+    print(f"    To begin, please press ENTER")
+    print(f"========================================")

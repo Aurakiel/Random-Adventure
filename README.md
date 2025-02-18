@@ -1,7 +1,19 @@
 # **Random Adventure**
 
 ## Project Notes 02/17/2025
-> Took some advice from Danny @ Code: You and decided to
+
+> Update 2: Created a file to store the functions. Made a couple new
+> ones. The main is cleaning up and nothing seems to have broke in
+> the process. Productive day.
+> 
+> ***Plans for Tomorrow*** Rework the invalid input for name selection
+> so the Narrator chooses a name at random instead of forcing the player
+> to use their first input. This will bypass that potential issue with
+> pressing [ENTER] since there is no second prompt to correct it and
+> it'll give the Narrator more personality development. We love the
+> Narrator. Shooting for comedy gold.
+>
+> Update 1: Took some advice from Danny @ Code: You and decided to
 > dabble in oop for some object handling. Removed the list
 > created to hold hero info and created a class file. Created
 > a Hero class to use instead of a list - used said class to 

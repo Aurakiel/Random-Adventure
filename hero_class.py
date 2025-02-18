@@ -4,4 +4,3 @@ class Hero:
         self.name = name
         self.hp = hp
         self.atk = atk
-
