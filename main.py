@@ -20,7 +20,7 @@ def info_melee_hero(meleeHero):
         print(f"AtK: {meleeHero[2]}")
 
 # Function for Narrator text
-def type_narration(text, delay=0.1):
+def type_narration(text, delay=0.05):
     for char in text:
         print(char, end='', flush=True)
         time.sleep(delay)
@@ -62,20 +62,24 @@ while True:
                     type_narration(narration)
                     narration = f"Narrator: Brave Adventurer, what is your name?"
                     type_narration(narration)
+                    # prompts for hero name
                     print(f"---------------------------------------------------------------------------")
                     hero.name = input(f"Please type your name: ")
                     print(f"---------------------------------------------------------------------------")
                     narration = (f"Narrator: {hero.name}, hero of legend. Is that really the name you "
                                  f"want echoed through the ages?")
                     type_narration(narration)
+                    # prompts for name confirmation
                     print(f"---------------------------------------------------------------------------")
                     userInput = input("Type: 'no' .....to give a new name\n"
                                       "Type: 'yes'.....to carry on\n"
                                       "Please make your selection: ")
                     print(f"---------------------------------------------------------------------------")
+                    # controls naming options
                     changeName = userInput.lower()
                     match changeName:
                         case 'no':
+                            # player renames hero
                             clear_screen()
                             narration = (f"Narrator: We've yet to begin and you're already making changes "
                                          f"to the story.  Typical hero nonsense.")
@@ -83,6 +87,7 @@ while True:
                             narration = (f"Narrator: Have it your way my insecure friend. What name do "
                                          f"you wish to be remembered by?")
                             type_narration(narration)
+                            # prompt for new name
                             print(f"---------------------------------------------------------------------------")
                             hero.name = input("This is it, state your name for the record: ")
                             print(f"---------------------------------------------------------------------------")
@@ -96,6 +101,7 @@ while True:
                             print("...Loading Next Chapter...")
                             time.sleep(2)
                         case 'yes':
+                            # name confirmed - Narrator sass
                             clear_screen()
                             narration = f"Narrator: If you say so...{hero.name}."
                             type_narration(narration)
@@ -104,6 +110,7 @@ while True:
                             print("...Loading Next Chapter...")
                             time.sleep(2)
                         case _:
+                            # invalid input = Narrator sass - moves along
                             clear_screen()
                             narration = (f"Narrator: When given two options, you decide to go rogue.")
                             type_narration(narration)
@@ -111,6 +118,7 @@ while True:
                             type_narration(narration)
                             print("...Loading Next Chapter...")
                             time.sleep(2)
+                    # Game continues after naming
                     print("Code this outside case")
                     time.sleep(5)
                 # opens lore menu - needs coded
