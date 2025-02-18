@@ -1,41 +1,19 @@
 #--------------------------------
 # Developer: Ashley Schultz 2025
 # -------------------------------
+# modules
 import os
 import sys
 import time
+import random
+# game_functions.py
+from game_functions import clear_screen
+from game_functions import program_intro
+from game_functions import  type_narration
 # hero_class.py
 from hero_class import Hero
 # default hero settings
 hero = Hero("You", 25, 5)
-
-# Function to clear the screen
-def clear_screen():
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-# Function to display melee Hero info
-def info_melee_hero(meleeHero):
-        print(f"Name: {meleeHero[0]}")
-        print(f"HP: {meleeHero[1]}")
-        print(f"AtK: {meleeHero[2]}")
-
-# Function for Narrator text
-def type_narration(text, delay=0.05):
-    for char in text:
-        print(char, end='', flush=True)
-        time.sleep(delay)
-    print()
-
-# Function to display Main Menu
-def program_intro():
-    print(f"========================================")
-    print(f"     Welcome to Random Adventure")
-    print(f"========================================")
-    print(f"           Menu Options")
-    print(f"Type: start ......to begin your adventure")
-    print(f"Type: quit  ......to end the game")
-    print(f"Type: lore  ......for the backstory")
-    print(f"========================================")
 # ----------------------------------------------------
 # progam start
 # ----------------------------------------------------
