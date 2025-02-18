@@ -1,5 +1,12 @@
 # **Random Adventure**
 
+## Project Notes 02/18/2025
+
+> Had a little time before work to do some more clean up in the main.
+> Moved some blocks of narration to their own functions and created an
+> insert_line function to break up input prompts from the narration.
+> Didn't break anything in the process. 
+
 ## Project Notes 02/17/2025
 
 > Update 2: Created a file to store the functions. Made a couple new

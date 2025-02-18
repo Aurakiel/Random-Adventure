@@ -7,10 +7,9 @@ import sys
 import time
 import random
 # game_functions.py
-from game_functions import clear_screen
-from game_functions import program_intro
-from game_functions import type_narration
-from game_functions import press_enter
+from game_functions import clear_screen, program_intro, type_narration
+from game_functions import press_enter, insert_line
+from game_functions import narration_start_game, narration_change_name_no
 # hero_class.py
 from hero_class import Hero
 # default hero settings
@@ -30,44 +29,37 @@ while True:
             program_intro()
             userInput = input("Please type your selection: ")
             # controls main menu selection
-            menuSelection = userInput
+            menuSelection = userInput.lower()
             match menuSelection:
                 # progresses game - needs hella more code
                 case "start":
                     clear_screen()
-                    narration = f"Narrator: Every story, has a main character. In this story, it's you."
-                    type_narration(narration)
-                    narration = f"Narrator: Brave Adventurer, what is your name?"
-                    type_narration(narration)
-                    # prompts for hero name
-                    print(f"---------------------------------------------------------------------------")
+                    narration_start_game()
+                    insert_line()
+                    # gets name
                     hero.name = input(f"Please type your name: ")
-                    print(f"---------------------------------------------------------------------------")
+                    insert_line()
                     narration = (f"Narrator: {hero.name}, hero of legend. Is that really the name you "
                                  f"want echoed through the ages?")
                     type_narration(narration)
-                    # prompts for name confirmation
-                    print(f"---------------------------------------------------------------------------")
+                    insert_line()
+                    # confirm name
                     userInput = input("Type: 'no' .....to give a new name\n"
                                       "Type: 'yes'.....to carry on\n"
                                       "Please make your selection: ")
-                    print(f"---------------------------------------------------------------------------")
+                    insert_line()
                     # controls naming options
                     changeName = userInput.lower()
                     match changeName:
                         case 'no':
                             # player renames hero
                             clear_screen()
-                            narration = (f"Narrator: We've yet to begin and you're already making changes "
-                                         f"to the story.  Typical hero nonsense.")
-                            type_narration(narration)
-                            narration = (f"Narrator: Have it your way my insecure friend. What name do "
-                                         f"you wish to be remembered by?")
-                            type_narration(narration)
-                            # prompt for new name
-                            print(f"---------------------------------------------------------------------------")
+                            narration_change_name_no()
+                            insert_line()
+                            # prompt for name change
                             hero.name = input("This is it, state your name for the record: ")
-                            print(f"---------------------------------------------------------------------------")
+                            insert_line()
+                            # additional narrator sass
                             narration = (f"Narrator: When given the choice of any name, you choose {hero.name}? "
                                          f"Your choices seem questionable.")
                             type_narration(narration)
@@ -95,7 +87,7 @@ while True:
                             type_narration(narration)
                             print("...Loading Next Chapter...")
                             time.sleep(2)
-                    # Game continues after naming
+                    # Game continues after naming - needs coding
                     print("Code this outside case")
                     time.sleep(5)
                 # opens lore menu - needs coded
