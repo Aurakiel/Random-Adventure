@@ -1,6 +1,7 @@
 import os
 import time
 
+
 # Function to clear the screen
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -11,6 +12,10 @@ def type_narration(text, delay=0.05):
         print(char, end='', flush=True)
         time.sleep(delay)
     print()
+
+#---------------------------------------------------------
+# Display functions
+#---------------------------------------------------------
 
 # Function to display Main Menu
 def program_intro():
@@ -29,19 +34,22 @@ def press_enter():
     print(f"    To begin, please press ENTER")
     print(f"========================================")
 
-# Function for
+# Function for line
 def insert_line():
     print(f"-------------------------------------------------------------------------------------")
 
-#-------------------------------------
+#------------------------------------------------------------
 # Function(s) for Narrator dialogue
-#-------------------------------------
+#------------------------------------------------------------
+
+# narration 1
 def narration_start_game():
     narration = f"Narrator: Every story, has a main character. In this story, it's you."
     type_narration(narration)
     narration = f"Narrator: Brave Adventurer, what is your name?"
     type_narration(narration)
 
+# narration 2
 def narration_change_name_no():
     narration = (f"Narrator: We've yet to begin and you're already making changes "
                  f"to the story.  Typical hero nonsense.")

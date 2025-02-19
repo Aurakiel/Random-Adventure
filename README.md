@@ -2,7 +2,14 @@
 
 ## Project Notes 02/18/2025
 
-> Had a little time before work to do some more clean up in the main.
+> Update 2: Commented everything out to attempt to go another way
+> realizing I didn't need to do that. For now, putting this project
+> on hold while starting fresh. Organizing everything got gears 
+> turning, for better or worse and I need to see where it goes
+> before building off this. If the muse hit, this will be shelved.
+> If it didn't, I'll pick this up again. 
+>
+> Update 1: Had a little time before work to do some more clean up in the main.
 > Moved some blocks of narration to their own functions and created an
 > insert_line function to break up input prompts from the narration.
 > Didn't break anything in the process. 

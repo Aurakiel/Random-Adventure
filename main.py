@@ -34,7 +34,7 @@ while True:
                 # progresses game - needs hella more code
                 case "start":
                     clear_screen()
-                    narration_start_game()
+                    narration_start_game() # narration 1
                     insert_line()
                     # gets name
                     hero.name = input(f"Please type your name: ")
@@ -54,7 +54,7 @@ while True:
                         case 'no':
                             # player renames hero
                             clear_screen()
-                            narration_change_name_no()
+                            narration_change_name_no() # narration 2
                             insert_line()
                             # prompt for name change
                             hero.name = input("This is it, state your name for the record: ")
